@@ -66,7 +66,6 @@ export class AppComponent {
   }
 
   clickProduct(id: number){
-    console.log('product');
-    console.log(id);
+    console.log('product -> id', id);
   }
 }
