@@ -1,0 +1,11 @@
+//se utiliza host para utilizar el <app-product> como panel group de los componentes y meterlos dentro de un borde
+:host {
+    margin: 2px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+}
+
+img {
+    max-width: 100%;
+}
