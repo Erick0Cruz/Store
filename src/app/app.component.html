@@ -21,3 +21,11 @@
     {{product.title }}
     <img [src]="product.image" alt=""> {{product.price }} {{product.description }}
 </div>
+
+<!-- Ng switch -->
+<div [ngSwitch]="title">
+    <p *ngSwitchCase="'Erick'">este es Erick</p>
+    <p *ngSwitchCase="'Andres'">este es Andres</p>
+    <p *ngSwitchCase="'Armando'">este es Armando</p>
+    <p *ngSwitchDefault>no hay match</p>
+</div>
