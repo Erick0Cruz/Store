@@ -18,17 +18,5 @@
 
 <!-- Recorrer mediante la interfaz product -->
 <div *ngFor="let product of products">
-    {{product.title }}
-    <img [src]="product.image" alt=""> {{product.price }} {{product.description }}
+    <app-product (productClicked)="clickProduct($event)" [product]="product"></app-product>
 </div>
-
-<!-- Ng switch -->
-<div [ngSwitch]="title">
-    <p *ngSwitchCase="'Erick'">este es Erick</p>
-    <p *ngSwitchCase="'Andres'">este es Andres</p>
-    <p *ngSwitchCase="'Armando'">este es Armando</p>
-    <p *ngSwitchDefault>no hay match</p>
-</div>
-
-<!-- Utilizacion de componentes externos-->
-<app-product></app-product>
