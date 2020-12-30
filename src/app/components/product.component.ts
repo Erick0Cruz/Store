@@ -1,13 +1,13 @@
 // Utiliza el decorador para ver si es un componente o servicio o demas
 import {
-    Component, 
-    Input, 
-    Output, 
-    EventEmitter, 
-    OnChanges, 
-    SimpleChanges, 
+    Component,
+    Input,
+    Output,
+    EventEmitter,
+    OnChanges,
+    SimpleChanges,
     OnInit,
-    DoCheck, 
+    DoCheck,
     OnDestroy
 } from '@angular/core';
 
@@ -33,22 +33,22 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
         console.log(changes);
     } */
 
-    ngOnInit() {
+    ngOnInit(): void {
         console.log('3._ ngOnInit');
     }
 
-    //Posee problemas de colision entre el doCheck y el on changes 
-    //por ende se coment el mentodo anterior el cual lo realiza por default
-    //de igual manera se elimina de la implementación
+    // Posee problemas de colision entre el doCheck y el on changes
+    // por ende se coment el mentodo anterior el cual lo realiza por default
+    // de igual manera se elimina de la implementación
     ngDoCheck(): void {
         console.log('4._ ngOnDoCheck');
     }
 
-    ngOnDestroy() {
+    ngOnDestroy(): void {
         console.log('5._ ngOnDestroy');
     }
 
-    addCart(){
+    addCart(): void{
         console.log('añadir al carrito');
         this.productClicked.emit(this.product.id);
     }
