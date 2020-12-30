@@ -1,7 +1,17 @@
-<!-- String Interpolation -->
+<!-- String Interpolation title = component.ts -->
 <input type="text" [(ngModel)]="title" /> {{ title }}
 
 <!-- Condicional ngif-->
 <div *ngIf="title !== 'Erick'">
     este es un div
 </div>
+
+<!-- Bucle ngFor items = component.ts -->
+<button (click)="addItem()">Agregar item</button>
+<ul>
+    <li *ngIf="items.length === 0">La lista esta vacía</li>
+    <li *ngFor="let nombre of items; index as i">
+        {{ nombre}} {{i}}
+        <button (click)="deleteItem(i)">Delete</button>
+    </li>
+</ul>
