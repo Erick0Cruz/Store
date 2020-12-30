@@ -1,2 +1,7 @@
 <!-- String Interpolation -->
-<input type="text" [(ngModel)]="title" /> {{ "Hola Mundo" }} {{ 1 + 2 }} {{ title }}
+<input type="text" [(ngModel)]="title" /> {{ title }}
+
+<!-- Condicional ngif-->
+<div *ngIf="title !== 'Erick'">
+    este es un div
+</div>
