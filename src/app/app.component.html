@@ -1,6 +1,9 @@
 <!-- String Interpolation title = component.ts -->
 <input type="text" [(ngModel)]="title" /> {{ title }}
 
+<!-- Utilizacion de pipes -->
+<input type="text" [(ngModel)]="power" /> {{ power | exponential }}
+
 <!-- Condicional ngif-->
 <div *ngIf="title !== 'Erick'">
     este es un div
