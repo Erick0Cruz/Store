@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BannerComponent } from './componentes/banner/banner.component';
-import { HomeComponent } from './home.component';
+import { HomeComponent } from './componentes/home/home.component';
 import { HomeRoutingModules } from './home-routing.module';
 
 @NgModule({
-    declarations:[
+    declarations: [
         BannerComponent,
         HomeComponent
     ],
-    imports:[
+    imports: [
+        CommonModule,
         HomeRoutingModules
     ]
 })
-export class HomeModule{
+export class HomeModule {
 
 }

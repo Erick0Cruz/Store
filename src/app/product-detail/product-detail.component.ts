@@ -10,11 +10,17 @@ import { Product } from './../product.model';
 })
 export class ProductDetailComponent implements OnInit {
 
-  product: Product;
+  product: Product = {
+    id: '',
+    image: '',
+    title: '',
+    price: 0,
+    description: ''
+  };
 
   constructor(
-    private route:ActivatedRoute,
-    private productService:ProductsService
+    private route: ActivatedRoute,
+    private productService: ProductsService
     ) { }
 
   ngOnInit(): void {
